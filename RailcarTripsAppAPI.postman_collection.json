@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "fdcb14ea-5a7b-43e3-8b3a-65f1493320a4",
+		"name": "RailcarTripsAppAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39375669"
+	},
+	"item": [
+		{
+			"name": "Get Trip Events",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/trips/{{id}}/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"trips",
+						"{{id}}",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Trips",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/trips",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"trips"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inject Cities",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Temp/canadian_cities.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/data-seed/seed-cities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"data-seed",
+						"seed-cities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inject Event Codes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Temp/event_code_definitions.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/data-seed/seed-event-codes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"data-seed",
+						"seed-event-codes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inject Eqipment Events",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Temp/equipment_events.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/trips/process",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"trips",
+						"process"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,31 @@
+﻿<div class="grid-item events-table">
+    <h3 class="table-title">Trip Events</h3>
+    @if (Events != null && Events.Any())
+    {
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Event Code</th>
+                    <th>City</th>
+                    <th>Local Time</th>
+                    <th>UTC Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var evt in Events)
+                {
+                    <tr>
+                        <td>@evt.EventCode</td>
+                        <td>@evt.City?.CityName</td>
+                        <td>@evt.EventDateTimeLocal.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                        <td>@evt.EventDateTimeUTC.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
+
+@code {
+    [Parameter] public List<EquipmentEvent> Events { get; set; } = new();
+}

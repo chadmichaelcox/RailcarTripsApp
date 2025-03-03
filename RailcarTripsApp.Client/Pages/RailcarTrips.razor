@@ -1,0 +1,43 @@
+﻿@page "/"
+@inject HttpClient Http
+@inject IJSRuntime JS
+
+<div class="page-header">Railcar Trips</div>
+
+<div class="main-container">
+    <FileUpload OnFileProcessed="LoadTrips" Title="@title"/>
+
+    <div class="grid-container">
+        <TripsTable Trips="trips" OnViewTrip="ShowTripDetails" />
+        <TripEventsTable Events="selectedTripEvents" />
+    </div>
+</div>
+
+@code {
+    private List<Trip> trips = new();
+    private List<EquipmentEvent> selectedTripEvents = new();
+    private string title = "Upload Railcar Trips File";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadTrips();
+    }
+
+    private async Task LoadTrips()
+    {
+        try
+        {
+            trips = await Http.GetFromJsonAsync<List<Trip>>("api/trips") ?? new List<Trip>();
+            StateHasChanged();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching trips: {ex.Message}");
+        }
+    }
+
+    private async Task ShowTripDetails(int tripId)
+    {
+        selectedTripEvents = await Http.GetFromJsonAsync<List<EquipmentEvent>>($"api/trips/{tripId}/events") ?? new List<EquipmentEvent>();
+    }
+}

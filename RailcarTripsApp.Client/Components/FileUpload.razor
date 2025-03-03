@@ -1,0 +1,41 @@
+﻿@inject HttpClient Http
+@inject IJSRuntime JS
+
+<div class="upload-container">
+    <h3 class="section-title">@Title</h3>
+    <InputFile OnChange="OnFileSelected" class="file-input" />
+    <button class="upload-btn" @onclick="SubmitFile" disabled="@(!isFileSelected)">Upload & Process</button>
+</div>
+
+@code {
+    [Parameter] public string Title { get; set; }
+    private IBrowserFile? selectedFile;
+    private bool isFileSelected = false;
+
+    [Parameter] public EventCallback OnFileProcessed { get; set; }
+
+    private void OnFileSelected(InputFileChangeEventArgs e)
+    {
+        selectedFile = e.File;
+        isFileSelected = selectedFile != null;
+    }
+
+    private async Task SubmitFile()
+    {
+        if (selectedFile == null) return;
+
+        using var content = new MultipartFormDataContent();
+        content.Add(new StreamContent(selectedFile.OpenReadStream()), "file", selectedFile.Name);
+
+        var response = await Http.PostAsync("api/trips/process", content);
+        if (response.IsSuccessStatusCode)
+        {
+            await JS.InvokeVoidAsync("toastr.success", "File processed successfully");
+            await OnFileProcessed.InvokeAsync();
+        }
+        else
+        {
+            await JS.InvokeVoidAsync("toastr.error", "File processing failed");
+        }
+    }
+}

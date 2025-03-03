@@ -1,0 +1,45 @@
+﻿<div class="grid-item trips-table">
+    <h3 class="table-title">Trips</h3>
+    @if (Trips != null && Trips.Any())
+    {
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Equipment ID</th>
+                    <th>Origin</th>
+                    <th>Destination</th>
+                    <th>Start Time (UTC)</th>
+                    <th>End Time (UTC)</th>
+                    <th>Total Hours</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var trip in Trips)
+                {
+                    <tr>
+                        <td>@trip.EquipmentId</td>
+                        <td>@trip.OriginCity?.CityName</td>
+                        <td>@trip.DestinationCity?.CityName</td>
+                        <td>@trip.StartUTC.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                        <td>@(trip.EndUTC?.ToString("yyyy-MM-dd HH:mm:ss") ?? "N/A")</td>
+                        <td>@trip.TotalTripHours</td>
+                        <td>
+                            <button class="view-btn" @onclick="() => ViewTrip(trip.Id)">View Events</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
+
+@code {
+    [Parameter] public List<Trip> Trips { get; set; } = new();
+    [Parameter] public EventCallback<int> OnViewTrip { get; set; }
+
+    private async Task ViewTrip(int tripId)
+    {
+        await OnViewTrip.InvokeAsync(tripId);
+    }
+}

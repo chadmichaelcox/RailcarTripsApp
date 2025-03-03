@@ -181,6 +181,7 @@ These requests upload `canadian_cities.csv` and `event_code_definitions.csv` to 
 ## Further Implementations
 
 - Add unit and integration tests using xUnit and Moq for automated testing of controllers and services.
+- Refactor services and business logic to leverage dependency injection more effectively, promoting modularity and easier unit testing.
 - Do something custom instead of the standard Blazor WASM load GIF on app initialization.
 - Implement logic in the TripsController to skip or overwrite duplicate entries when uploading a new file.
 - Improve CSS styling for better UI aesthetics.
@@ -190,6 +191,7 @@ These requests upload `canadian_cities.csv` and `event_code_definitions.csv` to 
 - Add loading indicators for API calls that take time to process.
 - Implement a reset button to clear existing data before uploading a new file.
 - Use DTOs (Data Transfer Objects) for structured CRUD operations and dynamic table rendering.
+- Once the above point is complete, replace the two table components with one that can be reused to generate various tables dependent on the parameters passed to it.
 - Secure access to API endpoints using JWT-based authentication with bearer tokens to ensure only authorized users can interact with the backend.
 - Improve API error handling and logging to provide better debugging and production support.
 - Implement bulk trip deletion and modification so that users can delete or modify incorrectly processed trips.

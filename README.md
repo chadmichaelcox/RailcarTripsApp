@@ -170,7 +170,7 @@ These requests upload `canadian_cities.csv` and `event_code_definitions.csv` to 
 | How should users be notified about file uploads?                         | Toastr notifications inform the user of the success or failure of the CSV file upload.                                                                                     |
 | What is assumed about CSV file formats?                                  | The CSV file format (header names and column numbers) is assumed to always remain the same.                                                                                |
 | Would users need to modify or delete trips after processing?             | No modification or deletion of processed trips is currently allowed, assuming that uploaded data is correct and immutable. However, this could be reconsidered.            |
-| Should time zones be handled differently?                                | The system assumes *cities always have correct time zone mappings and converts local event times to UTC. Handling daylight savings changes might require extra validation. |
+| Should time zones be handled differently?                                | The system assumes cities always have correct time zone mappings and converts local event times to UTC. Handling daylight savings changes might require extra validation. |
 | Do we expect huge data loads?                                            | The app assumes a moderate number of trips and events. For larger datasets, batch processing and database indexing may be required.                                        |
 | Should uploaded CSV files be retained?                                   | Currently, the application processes CSV files but does not store them for future reference. Storing them in Azure Blob Storage could be an option.                        |
 | Should API endpoints be exposed publicly?                                | The API is currently open but should be secured using authentication methods like JWT or OAuth before real-world deployment.                                               |
@@ -186,7 +186,6 @@ These requests upload `canadian_cities.csv` and `event_code_definitions.csv` to 
 - Improve CSS styling for better UI aesthetics.
 - Add responsive design to adjust automatically to different screen sizes (currently optimized for 1920x1080).
 - Implement search and filtering in tables for a better user experience.
-- Secure APIs using modern authorization schemes such as JWT or OAuth.
 - Implement user authentication and authorization to control access to the application.
 - Add loading indicators for API calls that take time to process.
 - Implement a reset button to clear existing data before uploading a new file.
@@ -215,7 +214,7 @@ These requests upload `canadian_cities.csv` and `event_code_definitions.csv` to 
 - Implement Azure Active Directory (AAD) authentication for secure access.
 - Utilize Application Insights for logging and monitoring API performance.
 - Containerize the application with Docker to deploy the API using Azure Kubernetes Service (AKS) for enhanced scalability.
-- Use Azure Key Vault to secure **database connection strings, API keys, and JWT secrets** by storing them securely.
+- Use Azure Key Vault to secure database connection strings, API keys, and JWT secrets by storing them securely.
 - Improve performance using Azure Redis Cache by caching frequent queries such as trip lists to enhance application response time.
 - Set up CI/CD with GitHub Actions and Azure DevOps to automate deployments to Azure App Services using structured pipelines.
 - Enable API rate limiting and throttling to protect API endpoints from abuse and overuse by implementing rate limiting policies.

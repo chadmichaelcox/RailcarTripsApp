@@ -53,8 +53,8 @@ Ensure you have the following installed:
 ### **2. Clone the Repository**
 
 ```sh
-git clone https://github.com/chadmichaelcox/railcar-trips-app.git
-cd railcar-trips-app
+git clone https://github.com/chadmichaelcox/RailcarTripsApp.git
+cd RailcarTripsApp
 ```
 
 ### **3. Database Configuration**
@@ -159,22 +159,28 @@ These requests upload `canadian_cities.csv` and `event_code_definitions.csv` to 
 
 ## Assumptions and Justifications
 
-| Thought                                                        | Answer                                                                                                                 |
-| -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Would a user prefer seeing the city name instead of a city ID? | Users would rather view city names over IDs in the GUI (IDs are used in the database per the requirements).            |
-| How should trips be ordered?                                   | Trips are ordered by Equipment ID and further ordered chronologically by Start UTC.                                    |
-| Should comments be used in the code?                           | Some companies/people have strong opinions on comments. Instead, descriptive naming was used as per standard practice. |
-| How is the time difference handled?                            | The local-to-UTC conversion is done in the CSV file API call.                                                          |
-| How should front-end components be structured?                 | Standard Blazor practices were used to create reusable components for the file upload and tables.                      |
-| How is styling applied?                                        | A global `site.css` file is used for styling.                                                                          |
-| How should users be notified about file uploads?               | Toastr notifications inform the user of the success or failure of the CSV file upload.                                 |
-| What is assumed about CSV file formats?                        | The CSV file format (header names and column numbers) is assumed to always remain the same.                            |
+| Thought                                                                  | Answer                                                                                                                                                                     |
+| ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Would a user prefer seeing the city name instead of a city ID?           | Users would rather view city names over IDs in the GUI (IDs are used in the database per the requirements).                                                                |
+| How should trips be ordered?                                             | Trips are ordered by Equipment ID and further ordered chronologically by Start UTC.                                                                                        |
+| Should comments be used in the code?                                     | Some companies/people have strong opinions on comments. Instead, descriptive naming was used as per standard practice.                                                     |
+| How is the time difference handled?                                      | The local-to-UTC conversion is done in the CSV file API call.                                                                                                              |
+| How should front-end components be structured?                           | Standard Blazor practices were used to create reusable components for the file upload and tables.                                                                          |
+| How is styling applied?                                                  | A global `site.css` file is used for styling.                                                                                                                              |
+| How should users be notified about file uploads?                         | Toastr notifications inform the user of the success or failure of the CSV file upload.                                                                                     |
+| What is assumed about CSV file formats?                                  | The CSV file format (header names and column numbers) is assumed to always remain the same.                                                                                |
+| Would users need to modify or delete trips after processing?             | No modification or deletion of processed trips is currently allowed, assuming that uploaded data is correct and immutable. However, this could be reconsidered.            |
+| Should time zones be handled differently?                                | The system assumes *cities always have correct time zone mappings and converts local event times to UTC. Handling daylight savings changes might require extra validation. |
+| Do we expect huge data loads?                                            | The app assumes a moderate number of trips and events. For larger datasets, batch processing and database indexing may be required.                                        |
+| Should uploaded CSV files be retained?                                   | Currently, the application processes CSV files but does not store them for future reference. Storing them in Azure Blob Storage could be an option.                        |
+| Should API endpoints be exposed publicly?                                | The API is currently open but should be secured using authentication methods like JWT or OAuth before real-world deployment.                                               |
+| How should access be managed?                                            | There is no user authentication or role-based access control implemented yet. Using Azure Active Directory (AAD) or Identity Server could restrict access.                 |
 
 ---
 
 ## Further Implementations
 
-- Write comprehensive unit tests, especially for the backend
+- Add unit and integration tests using xUnit and Moq for automated testing of controllers and services.
 - Do something custom instead of the standard Blazor WASM load GIF on app initialization.
 - Implement logic in the TripsController to skip or overwrite duplicate entries when uploading a new file.
 - Improve CSS styling for better UI aesthetics.
@@ -187,6 +193,19 @@ These requests upload `canadian_cities.csv` and `event_code_definitions.csv` to 
 - Use DTOs (Data Transfer Objects) for structured CRUD operations and dynamic table rendering.
 - Secure access to API endpoints using JWT-based authentication with bearer tokens to ensure only authorized users can interact with the backend.
 - Improve API error handling and logging to provide better debugging and production support.
+- Implement bulk trip deletion and modification so that users can delete or modify incorrectly processed trips.
+- Support additional file formats by extending file processing to support Excel (.xlsx) and JSON for broader compatibility.
+- Enable user roles and permissions to restrict functionalities based on user roles such as Admin, Viewer, and Data Uploader.
+- Add notifications for long-running tasks to provide real-time updates on file processing progress.
+- Optimize database queries to improve EF Core query performance by using stored procedures or batch processing.
+- Implement audit logging for data changes to keep a history of changes to trips and events for auditing and debugging purposes.
+- Add a dark mode toggle to improve UI/UX by allowing users to switch between light and dark mode.
+- Introduce CSV processing validation to implement detailed validation checks to handle missing or malformed data before inserting into the database.
+- Implement pagination for tables to avoid large dataset loading issues by utilizing server-side pagination.
+- Display user-friendly error messages instead of raw exceptions to provide more informative and structured error handling.
+- Support multi-language UI by implementing localization for different regions to enhance accessibility.
+- Enable data export functionality to allow users to export trips and events in CSV, JSON, or PDF formats.
+
 
 ### **Real-World Implementation in Azure**
 
@@ -195,6 +214,12 @@ These requests upload `canadian_cities.csv` and `event_code_definitions.csv` to 
 - Use Azure Functions to process the uploaded CSV asynchronously.
 - Implement Azure Active Directory (AAD) authentication for secure access.
 - Utilize Application Insights for logging and monitoring API performance.
+- Containerize the application with Docker to deploy the API using Azure Kubernetes Service (AKS) for enhanced scalability.
+- Use Azure Key Vault to secure **database connection strings, API keys, and JWT secrets** by storing them securely.
+- Improve performance using Azure Redis Cache by caching frequent queries such as trip lists to enhance application response time.
+- Set up CI/CD with GitHub Actions and Azure DevOps to automate deployments to Azure App Services using structured pipelines.
+- Enable API rate limiting and throttling to protect API endpoints from abuse and overuse by implementing rate limiting policies.
+- Deploy the app to multiple Azure regions to ensure high availability and disaster recovery in case of failures.
 
 ---
 

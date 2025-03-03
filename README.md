@@ -16,8 +16,8 @@ This project follows a clean architecture approach with three separate projects:
 
 - **File Upload**: Users can upload a CSV file containing railcar/equipment events.
 - **Data Processing**: The application converts event records into trips.
-- **Database Storage**: Processed trips and event details are stored in **SQL Server.
-- **Trip Listing**: Users can view all processed trips in a table format**.
+- **Database Storage**: Processed trips and event details are stored in SQL Server.
+- **Trip Listing**: Users can view all processed trips in a table format.
 - **Event History**: Clicking on a trip allows users to view detailed event records.
 - **Modern UI**: The interface is built with Blazor WebAssembly, CSS Grid, and toastr.js for notifications.
 - **Entity Framework Core**: Used for database access.
@@ -176,25 +176,25 @@ These requests upload `canadian_cities.csv` and `event_code_definitions.csv` to 
 
 - Write comprehensive unit tests, especially for the backend
 - Do something custom instead of the standard Blazor WASM load GIF on app initialization.
-- Implement logic in the **TripsController** to **skip or overwrite duplicate entries** when uploading a new file.
-- Improve **CSS styling** for better UI aesthetics.
-- Add **responsive design** to adjust automatically to different screen sizes (currently optimized for 1920x1080).
-- Implement **search and filtering** in tables for a better user experience.
-- Secure APIs using **modern authorization schemes** such as **JWT or OAuth**.
-- Implement **user authentication and authorization** to control access to the application.
-- Add **loading indicators** for API calls that take time to process.
-- Implement a **reset button** to clear existing data before uploading a new file.
-- Use **DTOs (Data Transfer Objects)** for structured CRUD operations and dynamic table rendering.
-- Secure access to API endpoints using **JWT-based authentication with bearer tokens** to ensure only authorized users can interact with the backend.
-- Improve **API error handling and logging** to provide better debugging and production support.
+- Implement logic in the TripsController to skip or overwrite duplicate entries when uploading a new file.
+- Improve CSS styling for better UI aesthetics.
+- Add responsive design to adjust automatically to different screen sizes (currently optimized for 1920x1080).
+- Implement search and filtering in tables for a better user experience.
+- Secure APIs using modern authorization schemes such as JWT or OAuth.
+- Implement user authentication and authorization to control access to the application.
+- Add loading indicators for API calls that take time to process.
+- Implement a reset button to clear existing data before uploading a new file.
+- Use DTOs (Data Transfer Objects) for structured CRUD operations and dynamic table rendering.
+- Secure access to API endpoints using JWT-based authentication with bearer tokens to ensure only authorized users can interact with the backend.
+- Improve API error handling and logging to provide better debugging and production support.
 
 ### **Real-World Implementation in Azure**
 
-- Deploy the **frontend as an Azure Static Web App** with **Azure Blob Storage** for storing uploaded CSV files.
-- Deploy the **backend API to Azure App Services** with **SQL Server Azure Database**.
-- Use **Azure Functions** to process the uploaded CSV asynchronously.
-- Implement **Azure Active Directory (AAD) authentication** for secure access.
-- Utilize **Application Insights** for logging and monitoring API performance.
+- Deploy the frontend as an Azure Static Web App with Azure Blob Storage for storing uploaded CSV files.
+- Deploy the backend API to Azure App Services with SQL Server Azure Database.
+- Use Azure Functions to process the uploaded CSV asynchronously.
+- Implement Azure Active Directory (AAD) authentication for secure access.
+- Utilize Application Insights for logging and monitoring API performance.
 
 ---
 

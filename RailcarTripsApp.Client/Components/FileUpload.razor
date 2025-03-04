@@ -8,7 +8,7 @@
 </div>
 
 @code {
-    [Parameter] public string Title { get; set; }
+    [Parameter] public string Title { get; set; } = string.Empty;
     private IBrowserFile? selectedFile;
     private bool isFileSelected = false;
 

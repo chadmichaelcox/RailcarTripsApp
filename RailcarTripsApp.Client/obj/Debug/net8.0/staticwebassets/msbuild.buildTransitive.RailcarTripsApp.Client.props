@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\RailcarTripsApp.Client.props" />
-</Project>

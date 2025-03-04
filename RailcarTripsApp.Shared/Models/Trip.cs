@@ -7,18 +7,18 @@ namespace RailcarTripsApp.Shared.Models
     {
         [Key]
         public int Id { get; set; }
-        public string EquipmentId { get; set; }
+        public string EquipmentId { get; set; } = string.Empty;
 
         [ForeignKey("OriginCity")]
         public int OriginCityId { get; set; }
-        public City OriginCity { get; set; }
+        public City OriginCity { get; set; } = new City();
 
         [ForeignKey("DestinationCity")]
         public int DestinationCityId { get; set; }
-        public City DestinationCity { get; set; }
+        public City DestinationCity { get; set; } = new City();
 
-        public DateTime StartUTC { get; set; }  
-        public DateTime? EndUTC { get; set; }  
+        public DateTime StartUTC { get; set; }
+        public DateTime? EndUTC { get; set; }
         public double? TotalTripHours { get; set; }
     }
 }

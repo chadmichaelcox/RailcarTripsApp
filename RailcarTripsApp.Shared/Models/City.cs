@@ -6,15 +6,15 @@ namespace RailcarTripsApp.Shared.Models
     public class City
     {
         [Key]
-        [Ignore] 
+        [Ignore]
         public int Id { get; set; }
 
         [Required]
-        [Name("City Name")] 
-        public string CityName { get; set; }
+        [Name("City Name")]
+        public string CityName { get; set; } = string.Empty;
 
         [Required]
-        [Name("Time Zone")] 
-        public string TimeZone { get; set; }
+        [Name("Time Zone")]
+        public string TimeZone { get; set; } = string.Empty;
     }
 }

@@ -1,12 +1,71 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\chadc\\source\\repos\\RailcarTripsApp\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D95170C7-87C4-4231-9D80-981526B27CF7}|RailcarTripsApp.Client\\RailcarTripsApp.Client.csproj|c:\\users\\chadc\\source\\repos\\railcartripsapp\\railcartripsapp.client\\components\\fileupload.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D95170C7-87C4-4231-9D80-981526B27CF7}|RailcarTripsApp.Client\\RailcarTripsApp.Client.csproj|solutionrelative:railcartripsapp.client\\components\\fileupload.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D95170C7-87C4-4231-9D80-981526B27CF7}|RailcarTripsApp.Client\\RailcarTripsApp.Client.csproj|c:\\users\\chadc\\source\\repos\\railcartripsapp\\railcartripsapp.client\\components\\tripeventstable.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D95170C7-87C4-4231-9D80-981526B27CF7}|RailcarTripsApp.Client\\RailcarTripsApp.Client.csproj|solutionrelative:railcartripsapp.client\\components\\tripeventstable.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D95170C7-87C4-4231-9D80-981526B27CF7}|RailcarTripsApp.Client\\RailcarTripsApp.Client.csproj|c:\\users\\chadc\\source\\repos\\railcartripsapp\\railcartripsapp.client\\components\\tripstable.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D95170C7-87C4-4231-9D80-981526B27CF7}|RailcarTripsApp.Client\\RailcarTripsApp.Client.csproj|solutionrelative:railcartripsapp.client\\components\\tripstable.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FileUpload.razor",
+              "DocumentMoniker": "C:\\Users\\chadc\\source\\repos\\RailcarTripsApp\\RailcarTripsApp.Client\\Components\\FileUpload.razor",
+              "RelativeDocumentMoniker": "RailcarTripsApp.Client\\Components\\FileUpload.razor",
+              "ToolTip": "C:\\Users\\chadc\\source\\repos\\RailcarTripsApp\\RailcarTripsApp.Client\\Components\\FileUpload.razor",
+              "RelativeToolTip": "RailcarTripsApp.Client\\Components\\FileUpload.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-06T20:19:01.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TripsTable.razor",
+              "DocumentMoniker": "C:\\Users\\chadc\\source\\repos\\RailcarTripsApp\\RailcarTripsApp.Client\\Components\\TripsTable.razor",
+              "RelativeDocumentMoniker": "RailcarTripsApp.Client\\Components\\TripsTable.razor",
+              "ToolTip": "C:\\Users\\chadc\\source\\repos\\RailcarTripsApp\\RailcarTripsApp.Client\\Components\\TripsTable.razor",
+              "RelativeToolTip": "RailcarTripsApp.Client\\Components\\TripsTable.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-06T20:17:21.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TripEventsTable.razor",
+              "DocumentMoniker": "C:\\Users\\chadc\\source\\repos\\RailcarTripsApp\\RailcarTripsApp.Client\\Components\\TripEventsTable.razor",
+              "RelativeDocumentMoniker": "RailcarTripsApp.Client\\Components\\TripEventsTable.razor",
+              "ToolTip": "C:\\Users\\chadc\\source\\repos\\RailcarTripsApp\\RailcarTripsApp.Client\\Components\\TripEventsTable.razor",
+              "RelativeToolTip": "RailcarTripsApp.Client\\Components\\TripEventsTable.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-06T20:17:20.716Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RailcarTripsApp.Shared", "R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RailcarTripsApp.Server", "RailcarTripsApp.Server\RailcarTripsApp.Server.csproj", "{5E165931-D515-4B55-AB86-2A3C41E894B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RailcarTripsApp.Tests", "RailcarTripsApp.Tests\RailcarTripsApp.Tests.csproj", "{27FFD4F0-755A-4E59-A7B3-616AE8BEE0FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5E165931-D515-4B55-AB86-2A3C41E894B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E165931-D515-4B55-AB86-2A3C41E894B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E165931-D515-4B55-AB86-2A3C41E894B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27FFD4F0-755A-4E59-A7B3-616AE8BEE0FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27FFD4F0-755A-4E59-A7B3-616AE8BEE0FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27FFD4F0-755A-4E59-A7B3-616AE8BEE0FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27FFD4F0-755A-4E59-A7B3-616AE8BEE0FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

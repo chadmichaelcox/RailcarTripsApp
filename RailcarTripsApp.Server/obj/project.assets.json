@@ -1675,8 +1675,7 @@
         "dependencies": {
           "CsvHelper": "33.0.1",
           "Microsoft.EntityFrameworkCore": "8.0.13",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.13",
-          "MudBlazor": "8.3.0"
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.13"
         },
         "compile": {
           "bin/placeholder/RailcarTripsApp.Shared.dll": {}

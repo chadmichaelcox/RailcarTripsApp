@@ -1,0 +1,15 @@
+C:\Users\chadc\source\repos\RailcarTripsApp\RailcarTripsApp.Shared\bin\Debug\net8.0\RailcarTripsApp.Shared.deps.json
+C:\Users\chadc\source\repos\RailcarTripsApp\RailcarTripsApp.Shared\bin\Debug\net8.0\RailcarTripsApp.Shared.runtimeconfig.json
+C:\Users\chadc\source\repos\RailcarTripsApp\RailcarTripsApp.Shared\bin\Debug\net8.0\RailcarTripsApp.Shared.dll
+C:\Users\chadc\source\repos\RailcarTripsApp\RailcarTripsApp.Shared\bin\Debug\net8.0\RailcarTripsApp.Shared.pdb
+C:\Users\chadc\source\repos\RailcarTripsApp\RailcarTripsApp.Shared\obj\Debug\net8.0\RailcarTripsApp.Shared.csproj.AssemblyReference.cache
+C:\Users\chadc\source\repos\RailcarTripsApp\RailcarTripsApp.Shared\obj\Debug\net8.0\RailcarTripsApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chadc\source\repos\RailcarTripsApp\RailcarTripsApp.Shared\obj\Debug\net8.0\RailcarTripsApp.Shared.AssemblyInfoInputs.cache
+C:\Users\chadc\source\repos\RailcarTripsApp\RailcarTripsApp.Shared\obj\Debug\net8.0\RailcarTripsApp.Shared.AssemblyInfo.cs
+C:\Users\chadc\source\repos\RailcarTripsApp\RailcarTripsApp.Shared\obj\Debug\net8.0\RailcarTripsApp.Shared.csproj.CoreCompileInputs.cache
+C:\Users\chadc\source\repos\RailcarTripsApp\RailcarTripsApp.Shared\obj\Debug\net8.0\RailcarTripsApp.Shared.sourcelink.json
+C:\Users\chadc\source\repos\RailcarTripsApp\RailcarTripsApp.Shared\obj\Debug\net8.0\RailcarTripsApp.Shared.dll
+C:\Users\chadc\source\repos\RailcarTripsApp\RailcarTripsApp.Shared\obj\Debug\net8.0\refint\RailcarTripsApp.Shared.dll
+C:\Users\chadc\source\repos\RailcarTripsApp\RailcarTripsApp.Shared\obj\Debug\net8.0\RailcarTripsApp.Shared.pdb
+C:\Users\chadc\source\repos\RailcarTripsApp\RailcarTripsApp.Shared\obj\Debug\net8.0\RailcarTripsApp.Shared.genruntimeconfig.cache
+C:\Users\chadc\source\repos\RailcarTripsApp\RailcarTripsApp.Shared\obj\Debug\net8.0\ref\RailcarTripsApp.Shared.dll

@@ -12,7 +12,7 @@ using RailcarTripsApp.Server.Data;
 namespace RailcarTripsApp.Server.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250304011906_InitialCreate")]
+    [Migration("20250304171003_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

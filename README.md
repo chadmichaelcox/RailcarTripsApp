@@ -15,6 +15,7 @@ Write a Blazor Web Assembly application with the following requirements:
 - There should be a way to select a particular trip and see its events in order (bonus / nice to have).
 - Entity Framework should be used for database access.
 - Note: the other 2 CSV files can be scripted into the database (don't need a UI to upload or configure).
+
 Please use your discretion for how much time to spend on this. We’re looking to understand how you would organize an appropriately sized solution for this task and considerations you’ve made, rather than a complete fully flushed out working solution. TODO comments are appropriate to show considerations you’ve made that you don’t have time to fully implement. Please also list questions you have and the assumptions you’ve made to answer them.
 
 Code can be submitted as a zip file attachment to this email or a repository such as GitHub.

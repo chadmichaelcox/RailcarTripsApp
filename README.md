@@ -18,7 +18,7 @@ Write a Blazor Web Assembly application with the following requirements:
 
 Please use your discretion for how much time to spend on this. We’re looking to understand how you would organize an appropriately sized solution for this task and considerations you’ve made, rather than a complete fully flushed out working solution. TODO comments are appropriate to show considerations you’ve made that you don’t have time to fully implement. Please also list questions you have and the assumptions you’ve made to answer them.
 
-Code can be submitted as a zip file attachment to this email or a repository such as GitHub.
+
 
 ## Overview
 
